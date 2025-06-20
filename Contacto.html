@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+	<title>Reseñas</title>
+</head>
+<body>
+ <header>
+  <h1>Recomendación</h1>
+  </header>
+  <nav>
+    <ul>
+     <li><a href="index.html">Reseñas</a></li>
+     <li><a href="Reseña_peli.html">Pelicula</a></li>
+     <li><a href="reseña-libro.html">Libros</a></li>
+     <li><a href="reseña-videojuego.html">VideoJuego</a></li>
+     <li><a href="video.html">video</li>
+     <li><a href="Contacto.html">Recomendaciones</a></li>
+    </ul>
+  </nav>
+ </header>
+  <body>
+    <section class="form-register">
+      <h4>Recomendacion de libro</h4>
+      <input class="controls"type="text" name="nombre_usuario"id="nombres_usuario"placeholder="Nombre de Usuario">
+      <input class="controls"type="email" name="correo"id="correo"placeholder="Ingrese su correo">
+      <input class="controls"type="text" name="recomendacion"id="recomendaciones"placeholder="Nombre de un libro">
+      
+      <input class="botons" type="button" value="Enviar" onclick="mostrarAlerta()">
+
+      <div id="alerta" class="alerta">¡Gracias por tu recomendación Se notificara en tu correo cuando se suba tu recomendación! 📚</div>
+    </section>
+  <footer>
+    <h6>@edgar</h6>
+  </footer>
+  <script>
+    function mostrarAlerta() {
+      const alerta = document.getElementById("alerta");
+      alerta.classList.add("mostrar-alerta");
+
+      // Ocultar después de 3 segundos
+      setTimeout(() => {
+        alerta.classList.remove("mostrar-alerta");
+      }, 3000);
+
+      // También puedes limpiar los campos si deseas
+      document.getElementById("nombres_usuario").value = "";
+      document.getElementById("correo").value = "";
+      document.getElementById("recomendaciones").value = "";
+    }
+  </script>
+</body>
+</html>
